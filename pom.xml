@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+
+    <groupId>com.learn.project</groupId>
+    <artifactId>algorithm4-core</artifactId>
+    <version>1.0-SNAPSHOT</version>
+    <modules>
+        <module>algorithm-common</module>
+        <module>algorithm-base</module>
+    </modules>
+    <packaging>pom</packaging>
+
+    <properties>
+        <algorithm4-version>1.0-SNAPSHOT</algorithm4-version>
+        <lombok-version>1.18.16</lombok-version>
+        <junit-version>5.5.2</junit-version>
+        <upTool-version>1.0.0</upTool-version>
+    </properties>
+
+    <dependencyManagement>
+        <dependencies>
+
+            <!--algorithm-common-->
+            <dependency>
+                <groupId>com.learn.project</groupId>
+                <artifactId>algorithm-common</artifactId>
+                <version>${algorithm4-version}</version>
+            </dependency>
+
+            <!--stdlib-->
+            <dependency>
+                <groupId>com.algorithm.learn</groupId>
+                <artifactId>stdlib</artifactId>
+                <version>1.0</version>
+            </dependency>
+
+            <!--algs4-->
+            <dependency>
+                <groupId>com.algorithm.learn</groupId>
+                <artifactId>algs4</artifactId>
+                <version>1.0</version>
+            </dependency>
+
+            <!--lombok-->
+            <dependency>
+                <groupId>org.projectlombok</groupId>
+                <artifactId>lombok</artifactId>
+                <version>${lombok-version}</version>
+            </dependency>
+
+            <!--junit-->
+            <dependency>
+                <groupId>org.junit.jupiter</groupId>
+                <artifactId>junit-jupiter-engine</artifactId>
+                <version>${junit-version}</version>
+            </dependency>
+
+            <!--upTool https://github.com/chenfuyuan/uptool-->
+            <dependency>
+                <groupId>com.upTool</groupId>
+                <artifactId>upTool-core</artifactId>
+                <version>${upTool-version}</version>
+            </dependency>
+        </dependencies>
+    </dependencyManagement>
+
+</project>
